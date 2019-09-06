@@ -12,6 +12,42 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+      <body>
+    <h1>Commute Tracker!</h1>
+    <div id="message"></div>
+  <div id="pre-auth">
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign up!</legend>
+     <input class="text-field" type="text" name="credentials[email]" placeholder="Email">
+     <input class="text-field" type="password" name="credentials[password]" placeholder="Password">
+     <input class="text-field" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+     <input type="submit" value="Sign up">
+    </fieldset>
+  </form>
+  <br>
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign in!</legend>
+     <input class="text-field" type="text" name="credentials[email]" placeholder="Email">
+     <input class="text-field" type="password" name="credentials[password]" placeholder="Password">
+     <input type="submit" value="Sign in">
+    </fieldset>
+  </form>
+  <br>
+</div>
+  <div id="auth">
+
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change password</legend>
+     <input type="password" class="text-field" name="passwords[old]" placeholder="Current Password">
+     <input type="password" name="passwords[new]" class="text-field" placeholder="New Password">
+     <input type="submit" value="Change Password">
+    </fieldset>
+  </form>
+  <br>
+  <button id="sign-out" type="button" name="button">Logout</button>
+</div>
+  </body>
 </html>

@@ -1,1 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+
+$body-bg-color: $gray-200;
+$font-color: $light;
+
+body {
+  background-color: $body-bg-color;
+}
+
+.success {
+  border: 3px solid green;
+}
+
+.failure {
+  border: 3px solid red;
+}
+
+#pre-auth {
+  display: initial;
+}
+
+#auth {
+  display: none;
+}

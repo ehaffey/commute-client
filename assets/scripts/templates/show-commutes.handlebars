@@ -1,0 +1,21 @@
+{{#each commutes as |commute|}}
+  {{log commute}}
+  <section data-id="{{book.id}}">
+    <h6>Date:</h6>
+    <h3>
+      {{commute.date}}
+    </h3>
+    <h6>Method:</h6>
+    <p>
+        {{commute.mode}}
+    </p>
+    <p>
+        {{commute.time}}
+    </p>
+    <p>
+        {{commute.id}}
+    </p>
+    <button data-id="{{book.id}}" class="btn btn-danger delete-button">Remove</button>
+  </section>
+
+{{/each}}

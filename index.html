@@ -37,6 +37,22 @@
   <br>
 </div>
   <div id="auth">
+    <nav>
+    <div class="app-name">Library</div>
+    <div class="nav-buttons">
+      <button id="get-commutes" class="btn btn-info mr-2">List all Commutes</button>
+      <button id="clear-commutes" class="btn btn-outline-info">Clear Commutes</button>
+    </div>
+  </nav>
+    <form id="enter-commute" class="border">
+      <fieldset>
+        <legend>Save a commute</legend>
+       <input type="text" class="text-field" name="commute[date]" placeholder="Date (year-month-day)">
+       <input type="text" class="text-field" name="commute[mode]" placeholder="Method of commute">
+       <input type="text" class="text-field" name="commute[time]" placeholder="Time in minutes">
+       <input type="submit" value="Save commute">
+      </fieldset>
+    </form>
 
   <form id="change-password" class="border">
     <fieldset>
@@ -48,6 +64,7 @@
   </form>
   <br>
   <button id="sign-out" type="button" name="button">Logout</button>
+  <div id="content" class="content"></div>
 </div>
   </body>
 </html>

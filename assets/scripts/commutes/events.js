@@ -1,7 +1,7 @@
 'use strict'
 const getFormFields = require('./../../../lib/get-form-fields')
-const api = require('./api.js')
-const ui = require('./ui.js')
+const api = require('./api')
+const ui = require('./ui')
 
 const onAddCommute = function (event) {
   event.preventDefault()
@@ -18,15 +18,34 @@ const onGetCommutes = function (event) {
     .catch(ui.failure)
 }
 
-const onClearCommutes = (event) => {
+const onViewCommute = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.viewCommute(data.id)
+    .then(ui.viewCommutesSuccess)
+    .catch(ui.failure)
+}
+
+const onEditCommute = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const id = data.id
+  api.editCommute(id, data)
+    .then(function () {
+      onGetCommutes(event)
+    })
+    .catch(ui.failure)
+}
+
+const onClearCommutes = function (event) {
   event.preventDefault()
   ui.clearCommutes()
 }
 
-const onDeleteCommute = (event) => {
+const onDeleteCommute = function (event) {
   event.preventDefault()
-  const id = $(event.target).data('id')
-  api.deletecommute(id)
+  const id = $(event.target).closest('section').data('id')
+  api.deleteCommute(id)
     .then(function () {
       onGetCommutes(event)
     })
@@ -37,5 +56,7 @@ module.exports = {
   onAddCommute,
   onGetCommutes,
   onClearCommutes,
+  onEditCommute,
+  onViewCommute,
   onDeleteCommute
 }

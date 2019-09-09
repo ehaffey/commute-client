@@ -38,7 +38,7 @@
 </div>
   <div id="auth">
     <nav>
-    <div class="app-name">Library</div>
+    <div class="app-name">Navigation</div>
     <div class="nav-buttons">
       <button id="get-commutes" class="btn btn-info mr-2">List all Commutes</button>
       <button id="clear-commutes" class="btn btn-outline-info">Clear Commutes</button>
@@ -51,6 +51,25 @@
        <input type="text" class="text-field" name="commute[mode]" placeholder="Method of commute">
        <input type="text" class="text-field" name="commute[time]" placeholder="Time in minutes">
        <input type="submit" value="Save commute">
+      </fieldset>
+    </form>
+
+    <form id="view-commute" class="border">
+      <fieldset>
+        <legend>View a commute</legend>
+        <input type="text" class="text-field" name="id" placeholder="Commute ID">
+       <input type="submit" value="Search">
+      </fieldset>
+    </form>
+
+    <form id="edit-commute" class="border">
+      <fieldset>
+        <legend>Edit a Commute</legend>
+        <input type="text" class="text-field" name="id" placeholder="Commute ID">
+       <input type="text" class="text-field" name="commute[date]" placeholder="Date (year-month-day)">
+       <input type="text" class="text-field" name="commute[mode]" placeholder="Method of commute">
+       <input type="text" class="text-field" name="commute[time]" placeholder="Time in minutes">
+       <input type="submit" value="Save Changes">
       </fieldset>
     </form>
 

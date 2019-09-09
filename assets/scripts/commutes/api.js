@@ -24,7 +24,41 @@ const getCommutes = function () {
   })
 }
 
+const viewCommute = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/commutes/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const editCommute = function (id, data) {
+  return $.ajax({
+    url: config.apiUrl + '/commutes/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+const deleteCommute = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/commutes/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   addCommute,
-  getCommutes
+  getCommutes,
+  deleteCommute,
+  viewCommute,
+  editCommute
 }

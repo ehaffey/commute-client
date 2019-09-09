@@ -1,19 +1,27 @@
 {{#each commutes as |commute|}}
-  {{log commute}}
-  <section data-id="{{book.id}}">
+  <section data-id="{{commute.id}}">
     <h6>Date:</h6>
     <h3>
       {{commute.date}}
     </h3>
+    <p>
     <h6>Method:</h6>
-    <p>
-        {{commute.mode}}
+    {{#if commute.mode}}
+    {{commute.mode}}
+  {{else}}
+    No method provided
+  {{/if}}
     </p>
     <p>
-        {{commute.time}}
+      <h6>Time in Minutes:</h6>
+      {{#if commute.time}}
+      {{commute.time}}
+    {{else}}
+      No time provided
+    {{/if}}
     </p>
     <p>
-        {{commute.id}}
+      <h6>Commute ID: {{commute.id}}</h6>
     </p>
     <button data-id="{{book.id}}" class="btn btn-danger delete-button">Remove</button>
   </section>

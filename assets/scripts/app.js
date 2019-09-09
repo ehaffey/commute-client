@@ -16,8 +16,8 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#enter-commute').on('submit', commuteEvents.onAddCommute)
   $('#get-commutes').on('click', commuteEvents.onGetCommutes)
-
-  // not hooked up yet
-  $('#clear-commutes').on('click', commuteEvents.onClearBooks)
+  $('#clear-commutes').on('click', commuteEvents.onClearCommutes)
+  $('#edit-commute').on('submit', commuteEvents.onEditCommute)
+  $('#view-commute').on('submit', commuteEvents.onViewCommute)
   $('.content').on('click', '.delete-button', commuteEvents.onDeleteCommute)
 })

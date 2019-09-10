@@ -1,24 +1,28 @@
 {{#each commutes as |commute|}}
   <section data-id="{{commute.id}}">
-    <h6>Date:</h6>
-    <h3>
-      {{commute.date}}
-    </h3>
+    <h6>Date:
+      {{#if commute.date}}
+        {{commute.date}}
+      {{else}}
+        No date provided
+      {{/if}}
+    </h6>
     <p>
-    <h6>Method:</h6>
+    <h6>Method:
     {{#if commute.mode}}
     {{commute.mode}}
   {{else}}
     No method provided
   {{/if}}
-    </p>
+   </h6>
+   </p>
     <p>
-      <h6>Time in Minutes:</h6>
+      <h6>Time in Minutes:
       {{#if commute.time}}
       {{commute.time}}
     {{else}}
       No time provided
-    {{/if}}
+    {{/if}} </h6>
     </p>
     <p>
       <h6>Commute ID: {{commute.id}}</h6>

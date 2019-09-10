@@ -15,6 +15,7 @@ const getCommutesSuccess = function (data) {
   const commutesHTML = commutesHandlebars({ commutes: data.commutes })
   $('.content').html(commutesHTML)
   $('.text-field').val('')
+  $('.form-group').val('')
 }
 
 const viewCommutesSuccess = function (data) {

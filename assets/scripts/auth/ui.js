@@ -8,6 +8,8 @@ const signUpSuccess = function (data) {
   $('#auth').css('display', 'initial')
   $('#pre-auth').css('display', 'none')
   $('.text-field').val('')
+  $('.form-control').val('')
+  $('#registerModal').modal('hide')
   //  $('#sign-up').reset()
   // console.log('signUpSuccess ran')
 }
@@ -16,6 +18,8 @@ const signUpFailure = function () {
   $('#message').text('Sign up failed')
   $('#message').attr('class', 'failure')
   $('.text-field').val('')
+  $('.form-control').val('')
+  $('#registerModal').modal('hide')
   // console.error('signUpFailure ran')
 }
 
@@ -26,6 +30,7 @@ const signInSuccess = function (data) {
   $('#auth').css('display', 'initial')
   $('#pre-auth').css('display', 'none')
   $('.text-field').val('')
+  $('.form-control').val('')
   //  $('#sign-up').reset()
   // console.log('signInSuccess ran')
 }
@@ -34,6 +39,7 @@ const signInFailure = function () {
   $('#message').text('Sign in failed')
   $('#message').attr('class', 'failure')
   $('.text-field').val('')
+  $('.form-control').val('')
   // console.error('signInFailure ran')
 }
 
@@ -57,6 +63,7 @@ const signOutSuccess = function (data) {
   $('#message').attr('class', 'success')
   $('#auth').css('display', 'none')
   $('#pre-auth').css('display', 'initial')
+  $('.content').empty()
   // console.log('signOutSuccess ran')
 }
 

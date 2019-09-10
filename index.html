@@ -92,12 +92,48 @@
 </div> <!-- End of pre-auth div -->
 
   <div id="auth">
+    <!-- navbar start-->
     <nav class="navbar navbar-dark bg-dark">
       <div class="nav-buttons">
         <button id="get-commutes" class="btn btn-outline-light">List all Commutes</button>
         <button id="clear-commutes" class="btn btn-outline-light">Clear Commutes</button>
-      </div>
+
+
+      <div class="dropdown">
+        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Save Commute
+        </button>
+      <div class="dropdown-menu">
+      <form class="px-4 py-3" id="enter-commute">
+        <fieldset>
+      <div class="form-group">
+      <input type="text" class ="text-field" name="commute[date]" placeholder="Date (year-month-day)">
+    </div>
+
+    <div class="form-group">
+    <input type="text" class="text-field" name="commute[mode]" placeholder="Method of Commute">
+    </div>
+
+    <div class="form-group">
+    <input type="text" class="text-field" name="commute[time]" placeholder="Time in minutes">
+    </div>
+    <button type="submit" class="btn btn-secondary">Save Commute</button>
+  </fieldset>
+  </form>
+</div>
+</div>
+</div>
+       <form id="view-commute" class="form-inline">
+         <fieldset>
+       <input class="form-control mr-2" name ="id" type="search" placeholder="Find a commute" aria-label="Search">
+       <button class="btn btn-outline-light" type="submit">Search</button>
+         </fieldset>
+       </form>
+
     </nav>
+    <!-- navbar end-->
+
+    <!--
     <form id="enter-commute" class="border">
       <fieldset>
         <legend>Save a commute</legend>
@@ -107,15 +143,7 @@
        <input type="submit" value="Save commute">
       </fieldset>
     </form>
-
-    <form id="view-commute" class="border">
-      <fieldset>
-        <legend>View a commute</legend>
-        <input type="text" class="text-field" name="id" placeholder="Commute ID">
-       <input type="submit" value="Search">
-      </fieldset>
-    </form>
-
+  -->
     <form id="edit-commute" class="border">
       <fieldset>
         <legend>Edit a Commute</legend>

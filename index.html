@@ -98,9 +98,9 @@
         <button id="get-commutes" class="btn btn-outline-light">List all Commutes</button>
         <button id="clear-commutes" class="btn btn-outline-light">Clear Commutes</button>
 
-
+    </div>
       <div class="dropdown">
-        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Save Commute
         </button>
       <div class="dropdown-menu">
@@ -122,7 +122,31 @@
   </form>
 </div>
 </div>
+
+<div class="dropdown">
+  <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Settings
+  </button>
+<div class="dropdown-menu">
+<form class="px-4 py-3" id="change-password">
+  <fieldset>
+<div class="form-group">
+<input type="password" class ="text-field" name="passwords[old]" placeholder="Current Password">
 </div>
+
+<div class="form-group">
+<input type="password" class="text-field" name="passwords[new]" placeholder="New Password">
+</div>
+<button type="submit" class="btn btn-secondary">Change Password</button>
+</fieldset>
+
+</form>
+</div>
+</div>
+  <div class="nav-buttons">
+    <button id="sign-out" class="btn btn-outline-light" type="button" name="button">Logout</button>
+  </div>
+
        <form id="view-commute" class="form-inline">
          <fieldset>
        <input class="form-control mr-2" name ="id" type="search" placeholder="Find a commute" aria-label="Search">
@@ -131,19 +155,7 @@
        </form>
 
     </nav>
-    <!-- navbar end-->
 
-    <!--
-    <form id="enter-commute" class="border">
-      <fieldset>
-        <legend>Save a commute</legend>
-       <input type="text" class="text-field" name="commute[date]" placeholder="Date (year-month-day)">
-       <input type="text" class="text-field" name="commute[mode]" placeholder="Method of commute">
-       <input type="text" class="text-field" name="commute[time]" placeholder="Time in minutes">
-       <input type="submit" value="Save commute">
-      </fieldset>
-    </form>
-  -->
     <form id="edit-commute" class="border">
       <fieldset>
         <legend>Edit a Commute</legend>
@@ -155,16 +167,6 @@
       </fieldset>
     </form>
 
-  <form id="change-password" class="border">
-    <fieldset>
-      <legend>Change password</legend>
-     <input type="password" class="text-field" name="passwords[old]" placeholder="Current Password">
-     <input type="password" name="passwords[new]" class="text-field" placeholder="New Password">
-     <input type="submit" value="Change Password">
-    </fieldset>
-  </form>
-  <br>
-  <button id="sign-out" type="button" name="button">Logout</button>
   <div id="content" class="content container"></div>
 </div>
   </body>

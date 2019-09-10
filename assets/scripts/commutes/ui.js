@@ -13,7 +13,7 @@ const addCommuteSuccess = function () {
 const getCommutesSuccess = function (data) {
   // console.log(data)
   const commutesHTML = commutesHandlebars({ commutes: data.commutes })
-  $('.content').html(commutesHTML)
+  $('.content').html('<div class="row">' + commutesHTML + '</div>')
   $('.text-field').val('')
   $('.form-group').val('')
 }

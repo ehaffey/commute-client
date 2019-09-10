@@ -7,9 +7,15 @@ body {
   background-image: url('public/map.png');
 }
 
-h1 {
-  color: $font-color;
+h3 {
   text-align: center;
+  color: #fff;
+}
+
+#message {
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0 0.2em;
 }
 
 .success {
@@ -26,4 +32,14 @@ h1 {
 
 #auth {
   display: none;
+}
+
+.col-3 {
+  background-color: #d3d3ed;
+  border: solid;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
 }

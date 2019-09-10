@@ -1,4 +1,6 @@
 {{#each commutes as |commute|}}
+<div class="col-3">
+
   <section data-id="{{commute.id}}">
     <h6>Date:
       {{#if commute.date}}
@@ -29,5 +31,5 @@
     </p>
     <button data-id="{{book.id}}" class="btn btn-danger delete-button">Remove</button>
   </section>
-
+</div>
 {{/each}}

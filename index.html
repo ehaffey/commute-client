@@ -13,13 +13,15 @@
     </head>
 
       <body>
-    <h1>Commute Tracker!</h1>
-    <div id="message"></div>
+        <nav class="navbar navbar-dark bg-dark">
 
+        <h3> Commute Tracker</h3>
+         <div id="message"></div>
+       </nav>
 <div id="pre-auth">
     <div class="container">
 
-<!-- Modal -->
+<!-- Register Modal -->
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -81,70 +83,21 @@
     </article>
     </div>
     </aside>
-<!--
-    <aside class="col-sm-4">
-  <div class="card">
-  <article class="card-body">
-  <a href="" class="float-right btn btn-outline-primary flip">Sign in</a>
-  <h4 class="card-title mb-4 mt-1">Sign in</h4>
-     <form id="sign-up">
-      <div class="form-group">
-        <label>Your email</label>
-          <input name="credentials[email]" class="form-control" placeholder="Email" type="email">
-      </div>
-      <div class="form-group">
-        <label>Your password</label>
-          <input class="form-control" placeholder="password" type="password" name="credentials[password]">
-      </div>
-      <div class="form-group">
-        <label>Your password</label>
-          <input class="form-control" placeholder="password" type="password" name="credentials[password_confirmation]">
-      </div>
-      <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block"> Login  </button>
-      </div>
-    </form>
-  </article>
-  </div>
-  </aside>
--->
+
     </div>
 
     <!-- row.// -->
-    </div>
-    <!--container end.//-->
+  </div> <!-- End of pre-auth container -->
 
+</div> <!-- End of pre-auth div -->
 
-
-<!--  <form id="sign-up" class="border">
-    <fieldset>
-      <legend>Sign up!</legend>
-     <input class="text-field" type="text" name="credentials[email]" placeholder="Email">
-     <input class="text-field" type="password" name="credentials[password]" placeholder="Password">
-     <input class="text-field" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-     <input type="submit" value="Sign up">
-    </fieldset>
-  </form>
-  <br>
-  <form id="sign-in" class="border">
-    <fieldset>
-      <legend>Sign in!</legend>
-     <input class="text-field" type="text" name="credentials[email]" placeholder="Email">
-     <input class="text-field" type="password" name="credentials[password]" placeholder="Password">
-     <input type="submit" value="Sign in">
-    </fieldset>
-  </form>
-  <br>
- -->
- </div>
   <div id="auth">
-    <nav>
-    <div class="app-name">Navigation</div>
-    <div class="nav-buttons">
-      <button id="get-commutes" class="btn btn-info mr-2">List all Commutes</button>
-      <button id="clear-commutes" class="btn btn-outline-info">Clear Commutes</button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="nav-buttons">
+        <button id="get-commutes" class="btn btn-outline-light">List all Commutes</button>
+        <button id="clear-commutes" class="btn btn-outline-light">Clear Commutes</button>
+      </div>
+    </nav>
     <form id="enter-commute" class="border">
       <fieldset>
         <legend>Save a commute</legend>
@@ -184,7 +137,7 @@
   </form>
   <br>
   <button id="sign-out" type="button" name="button">Logout</button>
-  <div id="content" class="content"></div>
+  <div id="content" class="content container"></div>
 </div>
   </body>
 </html>

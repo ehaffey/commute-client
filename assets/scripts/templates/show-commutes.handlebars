@@ -29,7 +29,16 @@
     <p>
       <h6>Commute ID: {{commute.id}}</h6>
     </p>
-    <button data-id="{{book.id}}" class="btn btn-danger delete-button">Remove</button>
+    <div class="dropdown">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownDeleteButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Delete Entry
+  </button>
+  <div class="dropdown-menu text-center" aria-labelledby="dropdownDeleteButton">
+    <h5 class="dropdown-header">Are you sure?</h5>
+    <button data-id="{{book.id}}" class="btn btn-danger delete-button">Confirm</button>
+  </div>
+</div>
+
   </section>
 </div>
 {{/each}}

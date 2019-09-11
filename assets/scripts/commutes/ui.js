@@ -7,7 +7,6 @@ const addCommuteSuccess = function () {
   $('#message').text('Commute saved')
   $('#message').attr('class', 'success')
   $('.text-field').val('')
-  console.log('commutesuccess ran')
 }
 
 const getCommutesSuccess = function (data) {
@@ -16,17 +15,20 @@ const getCommutesSuccess = function (data) {
   $('.content').html('<div class="row">' + commutesHTML + '</div>')
   $('.text-field').val('')
   $('.form-group').val('')
+  $('.form-control').val('')
 }
 
-const viewCommutesSuccess = function (data) {
+const viewCommuteSuccess = function (data) {
 //  console.log(data)
   const commutesHTML = commutesHandlebars({ commutes: data })
   $('.content').html(commutesHTML)
   $('.text-field').val('')
+  $('.form-group').val('')
+  $('.form-control').val('')
 }
 
-const failure = function (error) {
-  console.error(error)
+const failure = function () {
+//  console.error(error)
   $('#message').text('Unable to complete request. Please check your entry and try again')
   $('#message').attr('class', 'failure')
 }
@@ -38,7 +40,7 @@ const clearCommutes = function () {
 module.exports = {
   addCommuteSuccess,
   getCommutesSuccess,
-  viewCommutesSuccess,
+  viewCommuteSuccess,
   clearCommutes,
   failure
 }

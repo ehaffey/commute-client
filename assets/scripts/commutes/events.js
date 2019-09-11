@@ -22,7 +22,7 @@ const onViewCommute = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.viewCommute(data.id)
-    .then(ui.viewCommutesSuccess)
+    .then(ui.viewCommuteSuccess)
     .catch(ui.failure)
 }
 

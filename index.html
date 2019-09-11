@@ -107,7 +107,7 @@
       <form class="px-4 py-3" id="enter-commute">
         <fieldset>
       <div class="form-group">
-      <input type="text" class ="text-field" name="commute[date]" placeholder="Date (year-month-day)">
+      <input type="date" class ="text-field" name="commute[date]" placeholder="Date (year-month-day)">
     </div>
 
     <div class="form-group">
@@ -149,24 +149,13 @@
 
        <form id="view-commute" class="form-inline">
          <fieldset>
-       <input class="form-control mr-2" name ="id" type="search" placeholder="Find a commute" aria-label="Search">
+       <input class="form-control mr-2" name ="id" type="search" placeholder="Find a commute by ID" aria-label="Search">
        <button class="btn btn-outline-light" type="submit">Search</button>
          </fieldset>
        </form>
 
     </nav>
-<!--
-    <form id="edit-commute" class="border">
-      <fieldset>
-        <legend>Edit a Commute</legend>
-        <input type="text" class="text-field" name="id" placeholder="Commute ID">
-       <input type="text" class="text-field" name="commute[date]" placeholder="Date (year-month-day)">
-       <input type="text" class="text-field" name="commute[mode]" placeholder="Method of commute">
-       <input type="text" class="text-field" name="commute[time]" placeholder="Time in minutes">
-       <input type="submit" value="Save Changes">
-      </fieldset>
-    </form>
--->
+
   <div id="content" class="content container"></div>
 </div>
   </body>

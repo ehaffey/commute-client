@@ -19,7 +19,7 @@ https://github.com/ehaffey/commute-api
 
 - HTML
 - CSS
-- SASS
+- Sass
 - Bootstrap
 - Javascript
 - jQuery
@@ -28,6 +28,7 @@ https://github.com/ehaffey/commute-api
 - Custom API
 - Ruby
 - Ruby on Rails
+- Postgresql
 - Heroku
 
 #### Planning and Development

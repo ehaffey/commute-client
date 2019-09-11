@@ -38,11 +38,15 @@ const onEditCommute = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   const id = $(event.target).closest('section').data('id')
-  api.editCommute(id, data)
-    .then(function () {
-      onGetCommutes(event)
-    })
-    .catch(ui.entryFailure)
+  if (Math.abs(data.commute.time) <= 2147483647) {
+    api.editCommute(id, data)
+      .then(function () {
+        onGetCommutes(event)
+      })
+      .catch(ui.entryFailure)
+  } else {
+    ui.numberFailure()
+  }
 }
 
 const onClearCommutes = function (event) {

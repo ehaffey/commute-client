@@ -35,18 +35,21 @@ const failure = function () {
 //  console.error(error)
   $('#message').text('Unable to complete request. Please check your entry and try again')
   $('#message').attr('class', 'failure')
+  setTimeout(function () { $('#message').attr('class', 'default') }, 500)
 }
 
 const entryFailure = function () {
 //  console.error(error)
   $('#message').text('¯\\_(ツ)_/¯ Please check your entry, be realistic with your inputs, and try again')
   $('#message').attr('class', 'failure')
+  setTimeout(function () { $('#message').attr('class', 'default') }, 500)
 }
 
 const numberFailure = function () {
 //  console.error(error)
   $('#message').text('Your time is not realistic. Please try again')
   $('#message').attr('class', 'failure')
+  setTimeout(function () { $('#message').attr('class', 'default') }, 500)
 }
 
 const clearCommutes = function () {

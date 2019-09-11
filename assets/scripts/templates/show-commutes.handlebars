@@ -48,15 +48,15 @@
 <form class="px-4 py-3 edit-commute" data-id="edit-{{commute.id}}">
   <fieldset>
 <div class="form-group">
-<input type="text" class="text" name="commute[date]" value="{{commute.date}}">
+<input type="text" class="text" name="commute[date]" value="{{commute.date}}" placeholder="Date (year-month-day)>
 </div>
 
 <div class="form-group">
-<input type="text" class="text" name="commute[mode]" value="{{commute.mode}}">
+<input type="text" class="text" name="commute[mode]" value="{{commute.mode}}" placeholder="Method of commute">
 </div>
 
 <div class="form-group">
-<input type="text" class="text" name="commute[time]" value="{{commute.time}}">
+<input type="text" class="text" name="commute[time]" value="{{commute.time}}" placeholder="Time in minutes">
 </div>
 <button type="submit" class="btn btn-outline-success">Save Changes</button>
 </fieldset>

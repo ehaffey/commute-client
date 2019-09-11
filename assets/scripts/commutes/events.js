@@ -29,7 +29,7 @@ const onViewCommute = function (event) {
 const onEditCommute = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  const id = data.id
+  const id = $(event.target).closest('section').data('id')
   api.editCommute(id, data)
     .then(function () {
       onGetCommutes(event)

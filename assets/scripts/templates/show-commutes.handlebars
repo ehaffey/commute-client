@@ -29,14 +29,39 @@
     <p>
       <h6>Commute ID: {{commute.id}}</h6>
     </p>
-    <div class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownDeleteButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown dropdown-inline">
+     <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownDeleteButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Delete Entry
   </button>
   <div class="dropdown-menu text-center" aria-labelledby="dropdownDeleteButton">
     <h5 class="dropdown-header">Are you sure?</h5>
-    <button data-id="{{book.id}}" class="btn btn-danger delete-button">Confirm</button>
+    <button data-id="{{commute.id}}" class="btn btn-warning delete-button">Confirm</button>
   </div>
+</div>
+
+<!--Edit Entry Menu-->
+<div class="dropdown dropdown-inline">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Edit Commute
+  </button>
+<div class="dropdown-menu">
+<form class="px-4 py-3 edit-commute" data-id="edit-{{commute.id}}">
+  <fieldset>
+<div class="form-group">
+<input type="text" class="text" name="commute[date]" value="{{commute.date}}">
+</div>
+
+<div class="form-group">
+<input type="text" class="text" name="commute[mode]" value="{{commute.mode}}">
+</div>
+
+<div class="form-group">
+<input type="text" class="text" name="commute[time]" value="{{commute.time}}">
+</div>
+<button type="submit" class="btn btn-outline-success">Save Changes</button>
+</fieldset>
+</form>
+</div>
 </div>
 
   </section>

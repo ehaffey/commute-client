@@ -17,7 +17,7 @@ $(() => {
   $('#enter-commute').on('submit', commuteEvents.onAddCommute)
   $('#get-commutes').on('click', commuteEvents.onGetCommutes)
   $('#clear-commutes').on('click', commuteEvents.onClearCommutes)
-  $('#edit-commute').on('submit', commuteEvents.onEditCommute)
   $('#view-commute').on('submit', commuteEvents.onViewCommute)
+  $('.content').on('submit', '.edit-commute', commuteEvents.onEditCommute)
   $('.content').on('click', '.delete-button', commuteEvents.onDeleteCommute)
 })

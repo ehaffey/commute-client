@@ -10,6 +10,8 @@ const addCommuteSuccess = function () {
 }
 
 const getCommutesSuccess = function (data) {
+  $('#message').text('Success')
+  $('#message').attr('class', 'success')
   // console.log(data)
   const commutesHTML = commutesHandlebars({ commutes: data.commutes })
   $('.content').html('<div class="row">' + commutesHTML + '</div>')
@@ -19,7 +21,9 @@ const getCommutesSuccess = function (data) {
 }
 
 const viewCommuteSuccess = function (data) {
-//  console.log(data)
+  $('#message').text('Success')
+  $('#message').attr('class', 'success')
+  //  console.log(data)
   const commutesHTML = commutesHandlebars({ commutes: data })
   $('.content').html(commutesHTML)
   $('.text-field').val('')
@@ -33,7 +37,20 @@ const failure = function () {
   $('#message').attr('class', 'failure')
 }
 
+const entryFailure = function () {
+//  console.error(error)
+  $('#message').text('¯\\_(ツ)_/¯ Please check your entry, be realistic with your inputs, and try again')
+  $('#message').attr('class', 'failure')
+}
+
+const numberFailure = function () {
+//  console.error(error)
+  $('#message').text('Your time is not realistic. Please try again')
+  $('#message').attr('class', 'failure')
+}
+
 const clearCommutes = function () {
+  $('#message').text('Success')
   $('.content').empty()
 }
 
@@ -42,5 +59,7 @@ module.exports = {
   getCommutesSuccess,
   viewCommuteSuccess,
   clearCommutes,
-  failure
+  failure,
+  entryFailure,
+  numberFailure
 }

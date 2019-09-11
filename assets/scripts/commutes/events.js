@@ -6,9 +6,13 @@ const ui = require('./ui')
 const onAddCommute = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.addCommute(data)
-    .then(ui.addCommuteSuccess)
-    .catch(ui.failure)
+  if (Math.abs(data.commute.time) <= 2147483647) {
+    api.addCommute(data)
+      .then(ui.addCommuteSuccess)
+      .catch(ui.entryFailure)
+  } else {
+    ui.numberFailure()
+  }
 }
 
 const onGetCommutes = function (event) {
@@ -21,9 +25,13 @@ const onGetCommutes = function (event) {
 const onViewCommute = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.viewCommute(data.id)
-    .then(ui.viewCommuteSuccess)
-    .catch(ui.failure)
+  if (data.id.length > 0) {
+    api.viewCommute(data.id)
+      .then(ui.viewCommuteSuccess)
+      .catch(ui.failure)
+  } else {
+    ui.failure()
+  }
 }
 
 const onEditCommute = function (event) {
@@ -34,7 +42,7 @@ const onEditCommute = function (event) {
     .then(function () {
       onGetCommutes(event)
     })
-    .catch(ui.failure)
+    .catch(ui.entryFailure)
 }
 
 const onClearCommutes = function (event) {

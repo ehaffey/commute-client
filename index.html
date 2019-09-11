@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Commute Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+      <body>
+        <nav class="navbar navbar-dark bg-dark">
+
+        <h3> Commute Tracker</h3>
+         <div id="message"></div>
+       </nav>
+<div id="pre-auth">
+    <div class="container">
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4>Register</h4>
+      </div>
+      <div class="container-fluid">
+
+
+        <form id="sign-up">
+         <div class="form-group">
+           <label>Your email</label>
+             <input name="credentials[email]" class="form-control" placeholder="Email" type="email">
+         </div>
+         <div class="form-group">
+           <label>Your password</label>
+             <input class="form-control" placeholder="password" type="password" name="credentials[password]">
+         </div>
+         <div class="form-group">
+           <label>Confirm password</label>
+             <input class="form-control" placeholder="password" type="password" name="credentials[password_confirmation]">
+         </div>
+
+
+
+         <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <hr>
+
+    <div class="row d-flex justify-content-center">
+    	<aside class="col-sm-4">
+    <div class="card">
+    <article class="card-body">
+      <!-- Modal button -->
+    <button type="button" class="float-right btn btn-outline-primary" data-toggle="modal" data-target="#registerModal">Register</button>
+
+    <h4 class="card-title mb-4 mt-1">Sign in</h4>
+    	 <form id="sign-in">
+        <div class="form-group">
+        	<label>Your email</label>
+            <input name="credentials[email]" class="form-control" placeholder="Email" type="email">
+        </div>
+        <div class="form-group">
+        	<label>Your password</label>
+            <input class="form-control" placeholder="password" type="password" name="credentials[password]">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+        </div>
+      </form>
+    </article>
+    </div>
+    </aside>
+
+    </div>
+
+    <!-- row.// -->
+  </div> <!-- End of pre-auth container -->
+
+</div> <!-- End of pre-auth div -->
+
+  <div id="auth">
+    <!-- navbar start-->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="nav-buttons">
+        <button id="get-commutes" class="btn btn-outline-light">List all Commutes</button>
+        <button id="clear-commutes" class="btn btn-outline-light">Clear Commutes</button>
+
+    </div>
+      <div class="dropdown">
+        <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Save Commute
+        </button>
+      <div class="dropdown-menu">
+      <form class="px-4 py-3" id="enter-commute">
+        <fieldset>
+      <div class="form-group">
+      <input type="date" class ="text-field" name="commute[date]" placeholder="Date (year-month-day)">
+    </div>
+
+    <div class="form-group">
+    <input type="text" class="text-field" name="commute[mode]" placeholder="Method of Commute">
+    </div>
+
+    <div class="form-group">
+    <input type="number" class="text-field" name="commute[time]" placeholder="Time in minutes">
+    </div>
+    <button type="submit" class="btn btn-secondary">Save Commute</button>
+  </fieldset>
+  </form>
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Settings
+  </button>
+<div class="dropdown-menu">
+<form class="px-4 py-3" id="change-password">
+  <fieldset>
+<div class="form-group">
+<input type="password" class ="text-field" name="passwords[old]" placeholder="Current Password">
+</div>
+
+<div class="form-group">
+<input type="password" class="text-field" name="passwords[new]" placeholder="New Password">
+</div>
+<button type="submit" class="btn btn-secondary">Change Password</button>
+</fieldset>
+
+</form>
+</div>
+</div>
+  <div class="nav-buttons">
+    <button id="sign-out" class="btn btn-outline-light" type="button" name="button">Logout</button>
+  </div>
+
+       <form id="view-commute" class="form-inline">
+         <fieldset>
+       <input class="form-control mr-2" name ="id" type="number" placeholder="Find a commute by ID" aria-label="Search">
+       <button class="btn btn-outline-light" type="submit">Search</button>
+         </fieldset>
+       </form>
+
+    </nav>
+
+  <div id="content" class="content container"></div>
+</div>
+  </body>
+</html>
